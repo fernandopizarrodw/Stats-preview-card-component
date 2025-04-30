@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: aliceblue;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 200px auto;
+  background-color: #1c1938;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.card-image {
+  background-image: url('images/image-header-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  min-height: 350px;
+  position: relative;
+}
+
+.card-image::after {
+  content: "";
+  background-color: #ac2cfbb0;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-text {
+  padding: 40px 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 2.8rem;
+}
+
+strong {
+  color: hsl(277, 64%, 61%);
+}
+
+p {
+  color: #89879f;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.data-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.data-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.data-number {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  width: 120px;
+}
+
+.data-text {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: #89879f;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.attribution {
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 16px;
+  margin-top: -55px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    max-width: 70%;
+    margin-top: 90px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 240px;
+    background-image: url('images/image-header-mobile.jpg');
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-text {
+    width: 100%;
+    padding: 30px 25px;
+    text-align: center;
+    align-items: center;
+    
+  }
+  p{
+    font-size: 1rem;
+  }
+
+  .data-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .data-group {
+    align-items: center;
+  }
+  .attribution{
+    
+    margin-top: -100px;
+  }
+}
